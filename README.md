@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/daemoncibsec/S.H.E.L.L./blob/main/header-SHELL.png" alt="SHELL" width="1000px">
+  <img src="https://github.com/daemoncibsec/S.H.E.L.L./blob/main/header-SHELL.png" alt="SHELL" width="800px">
   <br>
 </h1>
 
